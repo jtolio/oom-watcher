@@ -7,5 +7,5 @@ subcommand.
 Example usage:
 
 	go build .
-	./oom-watcher --cgroup /sys/fs/cgroup/memory/mycgroup -- \
+	./oom-watcher --cgroup /sys/fs/cgroup/memory/yourcgroup -- \
 		mail -s oom oom-alert@yourco.com
