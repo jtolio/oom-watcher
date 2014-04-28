@@ -5,10 +5,6 @@ package eventfd
 
 /*
 #include <sys/eventfd.h>
-
-int64_t hostEndian64(void *data) {
-  return *((int64_t *)data);
-}
 */
 import "C"
 
@@ -59,7 +55,7 @@ func (efd *EventFD) ReadEvents() (count int64, err error) {
 	if n != 8 {
 		return 0, fmt.Errorf("eventfd returned less than 8 bytes: %d", n)
 	}
-	count = int64(C.hostEndian64(unsafe.Pointer(&buf[0])))
+	count = *(*int64)(unsafe.Pointer(&buf[0]))
 	return count, nil
 }
 
