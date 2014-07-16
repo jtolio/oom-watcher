@@ -7,7 +7,6 @@ import (
 	"errors"
 )
 
-
 type EventFD struct{}
 
 func NewEventFD() (*EventFD, error) {
