@@ -3,10 +3,15 @@
 
 package eventfd
 
+import (
+	"errors"
+)
+
+
 type EventFD struct{}
 
 func NewEventFD() (*EventFD, error) {
-	return new(EventFD), nil
+	return nil, errors.New("not implemented")
 }
 
 func (efd *EventFD) Close() error {
@@ -16,7 +21,7 @@ func (efd *EventFD) Close() error {
 // ReadEvents returns the count of events that have occurred since the last
 // call. If no events have transpired, blocks until at least one does.
 func (efd *EventFD) ReadEvents() (count int64, err error) {
-	select {}
+	return 0, errors.New("not implemented")
 }
 
 func (efd *EventFD) Fd() int {
