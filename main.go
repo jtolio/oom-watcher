@@ -9,7 +9,7 @@ import (
 	"os"
 	"os/exec"
 
-	"github.com/SpaceMonkeyGo/flagfile"
+	"github.com/spacemonkeygo/flagfile"
 	"github.com/jtolds/oom-watcher/watch"
 )
 
